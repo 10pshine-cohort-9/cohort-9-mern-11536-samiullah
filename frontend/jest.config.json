@@ -1,0 +1,6 @@
+{
+  "testEnvironment": "jsdom",
+  "transform": {},
+  "moduleFileExtensions": ["js", "jsx"],
+  "testMatch": ["**/__tests__/**/*.test.js"]
+}
