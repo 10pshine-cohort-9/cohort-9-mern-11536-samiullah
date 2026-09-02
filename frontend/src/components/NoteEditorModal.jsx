@@ -131,11 +131,10 @@ export const NoteEditorModal = () => {
             <div className="flex items-center gap-2">
               <button
                 onClick={() => setIsPinned(!isPinned)}
-                className={`p-2 rounded-xl transition ${
-                  isPinned
+                className={`p-2 rounded-xl transition ${isPinned
                     ? 'bg-amber-500/20 text-amber-600 dark:text-amber-400'
                     : 'text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800'
-                }`}
+                  }`}
                 title={isPinned ? 'Unpin' : 'Pin Note'}
               >
                 <Pin className={`w-4 h-4 ${isPinned ? 'fill-amber-500' : ''}`} />

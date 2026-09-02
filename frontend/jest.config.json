@@ -2,5 +2,11 @@
   "testEnvironment": "jsdom",
   "transform": {},
   "moduleFileExtensions": ["js", "jsx"],
-  "testMatch": ["**/__tests__/**/*.test.js"]
+  "testMatch": ["**/__tests__/**/*.test.js"],
+  "collectCoverageFrom": [
+    "src/**/*.{js,jsx}",
+    "!src/__tests__/**"
+  ],
+  "coverageReporters": ["lcov", "text"],
+  "coverageDirectory": "coverage"
 }
