@@ -99,9 +99,8 @@ export const NoteCard = ({ note, viewMode = 'grid' }) => {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, scale: 0.95 }}
       transition={{ duration: 0.2 }}
-      className={`group glass-card rounded-2xl p-4 flex flex-col justify-between relative transition-all duration-200 border-l-4 ${
-        viewMode === 'list' ? 'flex-row items-center py-3' : 'h-64'
-      }`}
+      className={`group glass-card rounded-2xl p-4 flex flex-col justify-between relative transition-all duration-200 border-l-4 ${viewMode === 'list' ? 'flex-row items-center py-3' : 'h-64'
+        }`}
       style={{ borderLeftColor: note.color || '#4f46e5' }}
     >
       {/* Note Header */}
@@ -121,11 +120,10 @@ export const NoteCard = ({ note, viewMode = 'grid' }) => {
           <div className="flex items-center gap-1">
             <button
               onClick={() => toggleFavorite(note.id)}
-              className={`p-1.5 rounded-lg transition ${
-                note.is_favorite
-                  ? 'text-amber-500 bg-amber-50 dark:bg-amber-950/40'
-                  : 'text-slate-400 hover:text-amber-500 hover:bg-slate-100 dark:hover:bg-slate-800'
-              }`}
+              className={`p-1.5 rounded-lg transition ${note.is_favorite
+                ? 'text-amber-500 bg-amber-50 dark:bg-amber-950/40'
+                : 'text-slate-400 hover:text-amber-500 hover:bg-slate-100 dark:hover:bg-slate-800'
+                }`}
               title={note.is_favorite ? 'Remove Favorite' : 'Mark Favorite'}
             >
               <Star className={`w-4 h-4 ${note.is_favorite ? 'fill-amber-500' : ''}`} />
@@ -251,9 +249,9 @@ export const NoteCard = ({ note, viewMode = 'grid' }) => {
       {/* Note Footer */}
       <div className="w-full mt-4 pt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between gap-2">
         <div className="flex items-center gap-1 overflow-hidden">
-          {tagList.slice(0, 3).map((tag, idx) => (
+          {tagList.slice(0, 3).map((tag) => (
             <span
-              key={idx}
+              key={`${note.id}-tag-${tag.trim()}`}
               className="text-[10px] px-1.5 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 truncate"
             >
               #{tag.trim()}

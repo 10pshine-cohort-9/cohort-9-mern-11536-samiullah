@@ -58,11 +58,10 @@ export const Sidebar = () => {
                   setSelectedCategory('');
                   setSelectedTag('');
                 }}
-                className={`w-full flex items-center justify-between px-3 py-2.5 rounded-xl font-medium text-sm transition-all duration-150 ${
-                  isActive
-                    ? 'bg-brand-500/10 text-brand-600 dark:text-brand-400 border border-brand-500/20 font-semibold'
-                    : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100/70 dark:hover:bg-slate-800/50'
-                }`}
+                className={`w-full flex items-center justify-between px-3 py-2.5 rounded-xl font-medium text-sm transition-all duration-150 ${isActive
+                  ? 'bg-brand-500/10 text-brand-600 dark:text-brand-400 border border-brand-500/20 font-semibold'
+                  : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100/70 dark:hover:bg-slate-800/50'
+                  }`}
               >
                 <div className="flex items-center gap-3">
                   <Icon className={`w-4 h-4 ${isActive ? 'text-brand-600 dark:text-brand-400' : 'text-slate-400'}`} />
@@ -70,11 +69,10 @@ export const Sidebar = () => {
                 </div>
                 {item.count > 0 && (
                   <span
-                    className={`text-xs px-2 py-0.5 rounded-full font-semibold ${
-                      isActive
-                        ? 'bg-brand-500 text-white'
-                        : 'bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400'
-                    }`}
+                    className={`text-xs px-2 py-0.5 rounded-full font-semibold ${isActive
+                      ? 'bg-brand-500 text-white'
+                      : 'bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400'
+                      }`}
                   >
                     {item.count}
                   </span>
@@ -91,9 +89,8 @@ export const Sidebar = () => {
           </p>
           <button
             onClick={() => setSelectedCategory('')}
-            className={`w-full text-left px-3 py-1.5 rounded-lg text-xs font-medium transition ${
-              selectedCategory === '' ? 'text-brand-600 font-bold' : 'text-slate-500 hover:text-slate-900 dark:hover:text-slate-200'
-            }`}
+            className={`w-full text-left px-3 py-1.5 rounded-lg text-xs font-medium transition ${selectedCategory === '' ? 'text-brand-600 font-bold' : 'text-slate-500 hover:text-slate-900 dark:hover:text-slate-200'
+              }`}
           >
             • All Categories
           </button>
@@ -101,11 +98,10 @@ export const Sidebar = () => {
             <button
               key={cat}
               onClick={() => setSelectedCategory(cat)}
-              className={`w-full flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-medium transition ${
-                selectedCategory === cat
-                  ? 'bg-purple-500/10 text-purple-600 dark:text-purple-400 font-bold border border-purple-500/20'
-                  : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100/70 dark:hover:bg-slate-800/50'
-              }`}
+              className={`w-full flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-medium transition ${selectedCategory === cat
+                ? 'bg-purple-500/10 text-purple-600 dark:text-purple-400 font-bold border border-purple-500/20'
+                : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100/70 dark:hover:bg-slate-800/50'
+                }`}
             >
               <Folder className="w-3.5 h-3.5 text-purple-500/70" />
               <span>{cat}</span>
@@ -119,8 +115,7 @@ export const Sidebar = () => {
         <NavLink
           to="/profile"
           className={({ isActive }) =>
-            `flex items-center gap-3 px-3 py-2 rounded-xl text-sm font-medium transition ${
-              isActive ? 'bg-slate-200/80 dark:bg-slate-800 text-slate-900 dark:text-slate-100 font-bold' : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/50'
+            `flex items-center gap-3 px-3 py-2 rounded-xl text-sm font-medium transition ${isActive ? 'bg-slate-200/80 dark:bg-slate-800 text-slate-900 dark:text-slate-100 font-bold' : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/50'
             }`
           }
         >

@@ -319,11 +319,10 @@ export const Navbar = () => {
                           setSelectedTag('');
                           setIsMobileDrawerOpen(false);
                         }}
-                        className={`w-full flex items-center justify-between px-3 py-2 rounded-xl font-medium text-xs transition ${
-                          isActive
+                        className={`w-full flex items-center justify-between px-3 py-2 rounded-xl font-medium text-xs transition ${isActive
                             ? 'bg-brand-500/10 text-brand-600 dark:text-brand-400 font-bold border border-brand-500/20'
                             : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800'
-                        }`}
+                          }`}
                       >
                         <div className="flex items-center gap-2.5">
                           <Icon className="w-4 h-4" />
@@ -349,9 +348,8 @@ export const Navbar = () => {
                       setSelectedCategory('');
                       setIsMobileDrawerOpen(false);
                     }}
-                    className={`w-full text-left px-3 py-1.5 rounded-lg text-xs font-medium ${
-                      selectedCategory === '' ? 'text-brand-600 font-bold' : 'text-slate-500'
-                    }`}
+                    className={`w-full text-left px-3 py-1.5 rounded-lg text-xs font-medium ${selectedCategory === '' ? 'text-brand-600 font-bold' : 'text-slate-500'
+                      }`}
                   >
                     • All Categories
                   </button>
@@ -362,11 +360,10 @@ export const Navbar = () => {
                         setSelectedCategory(cat);
                         setIsMobileDrawerOpen(false);
                       }}
-                      className={`w-full flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-medium ${
-                        selectedCategory === cat
+                      className={`w-full flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-medium ${selectedCategory === cat
                           ? 'bg-purple-500/10 text-purple-600 dark:text-purple-400 font-bold'
                           : 'text-slate-600 dark:text-slate-400'
-                      }`}
+                        }`}
                     >
                       <Folder className="w-3.5 h-3.5 text-purple-500" />
                       <span>{cat}</span>

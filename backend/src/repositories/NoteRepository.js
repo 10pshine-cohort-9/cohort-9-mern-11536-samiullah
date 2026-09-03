@@ -158,3 +158,10 @@ class NoteRepository {
 }
 
 module.exports = NoteRepository;
+favorites: favoriteRows[0]?.count || favoriteRows[0]?.['COUNT(*)'] || 0,
+  deleted: deletedRows[0]?.count || deletedRows[0]?.['COUNT(*)'] || 0
+    };
+  }
+}
+
+module.exports = NoteRepository;
